@@ -9,7 +9,7 @@ Contributions are welcome:)
 
 # TODO:
 - [ ] Add how to play and links 
-- [ ] Make it responsive
+- [x] Make it responsive
 - [ ] Offline mode as Progressive Web App
 - [ ] Add meta descriptions and image for social networks
 - [ ] Add analytics

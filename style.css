@@ -45,8 +45,8 @@ body {
 
 #footer {
     position: absolute;
-    bottom:0px;
-    right:0px;
+    bottom:1vmin;
+    right:2vmin;
     color:rgb(0, 0, 0);
 }
 

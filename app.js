@@ -39,7 +39,7 @@ $(function(){
             })
         }
         if(won!=0){
-            alert("Game over! Congratulations, " + (won==1?A:B) + " has won this round. \n András you are the best. This is the effect of paprika.")
+            alert("Game over! Congratulations, " + (won==1?A:B) + " has won this round.")
             boardState.fill(0);
             updateBoard();
         }
