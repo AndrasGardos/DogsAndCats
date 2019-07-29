@@ -58,4 +58,21 @@ $(function(){
             checkWin();
         }
     })
+
+    //Popups
+    
+    function hidePopups(){
+        $("#overlay").hide();
+        $(".popup").hide();
+    }
+    
+    function showPopup(which){
+        $("#overlay").show();
+        $(".popup."+which).show();
+    }
+
+    $("#footer a").click(function(){
+        showPopup($(this).data("popup"))
+    });
+    $("#overlay").click(hidePopups);
 })

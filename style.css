@@ -16,10 +16,12 @@ body {
     display:grid;
     grid-template-rows:repeat(15,1fr);
     grid-template-columns:repeat(15,1fr);
-    width:85vw;
+    /*width:85vw;
     height:85vh;
     max-width:85vh;
-    max-height:85vw;
+    max-height:85vw;*/
+    width:85vmin;
+    height:85vmin;
     margin:auto;
 }
 .box {
@@ -57,4 +59,27 @@ body {
     font-size:7vh;
     font-family: 'Fira Code', monospace;
 
+}
+
+#overlay {
+    position: absolute;
+    left:0px;
+    top:0px;
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display:none; /*oops*/
+}
+
+.popup {
+    display:none;
+    width:80vmin;
+    height:60vmin;
+    background-color: whitesmoke;
+    border-radius:5px;
+    padding:20px;
 }

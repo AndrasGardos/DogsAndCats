@@ -10,13 +10,25 @@
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+   -->
+   <script src="jquery.min.js"></script>
 </head>
 <body>
     <div id="header">  dogs  &  cats  </div>
     <div id="game">
     </div>
-    <div id="footer">How to play? | Credits</div>
+
+    <div id="footer">
+        <a href="#" data-popup="howtoplay">How to play?</a> | 
+        <a href="#" data-popup="settings">Settings</a> | 
+        <a href="#" data-popup="credits">Credits</a></div>
+
+    <div id="overlay">
+        <div class="popup settings">Settings</div>
+        <div class="popup howtoplay">How to play</div>
+        <div class="popup credits">Credits</div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
