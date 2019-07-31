@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Connect 5 by András Gárdos</title>
+    <title>Dogs & Cats by András Gárdos</title>
     <link rel="stylesheet" href="style.css">
 
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
 
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
-   -->
-   <script src="jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 </head>
+
 <body>
-    <div id="header">  dogs  &  cats  </div>
+    <div id="header">dogs  &  cats</div>
     <div id="game">
     </div>
 
@@ -25,9 +24,38 @@
         <a href="#" data-popup="credits">Credits</a></div>
 
     <div id="overlay">
-        <div class="popup settings">Settings</div>
-        <div class="popup howtoplay">How to play</div>
-        <div class="popup credits">Credits</div>
+        <div class="popup settings"><h2>Settings</h2>
+        <p>Players:</p>
+
+        <input type="text" name="playerA" id="playerA" class="playerEmoji" value="🐶"> vs. 
+        <input type="text" name="playerB" id="playerB" class="playerEmoji" value="🐱">
+        <p>Suggestions: <A href="#">1&2</A>|<A href="#">x&y</A>|<A href="#">+&-</A></p>
+        <br><br>
+        <button class="close">Close</button>
+        </div>
+
+        <div class="popup howtoplay"><h2>How to play</h2>
+        <p>Two players take turns in this game to place dogs and cats. Your goal is to have 5 of your animals in a row, vertically, horizontally, or diagonally, before the other player does.</p>
+        <p>Have fun!:)</p>
+        <button class="close">Let's play!</button>
+        </div>
+
+        <div class="popup credits"><h2>Credits</h2>
+        <p>Created by: András Gárdos</p>
+        <p>Special thanks for my girlfriend for testing with me, and her design ideas.</p>
+        <button class="close">Close</button>
+        </div>
+
+        <div class="popup gdpr"><h2>Thank you for trying this game!</h2>
+            <p>Like many other websites, I collect anonymised usage statistics with Google Analytics.</p>
+        <button class="close">Accept</button>
+        </div>
+
+
+        <div class="popup win"><h2>Game Over</h2>
+            <p>Congratulations, <span id="winner"></span> won this round. </p>
+        <button class="close">Next round</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

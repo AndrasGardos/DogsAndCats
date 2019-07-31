@@ -72,7 +72,6 @@ body {
     align-content: center;
     justify-content: center;
     align-items: center;
-    display:none; /*oops*/
 }
 
 .popup {
@@ -82,4 +81,30 @@ body {
     background-color: whitesmoke;
     border-radius:5px;
     padding:20px;
+}
+
+
+
+
+.gdpr {
+    /*Display this at the beginning*/
+    display:block;
+}
+
+p {
+margin:20px;
+}
+
+button {
+    background-color:navy;
+    color:white;
+    width:70px;
+    height:35px;
+
+}
+
+.playerEmoji {
+    width:30px;
+    height:30px;
+    font-size:25px;
 }

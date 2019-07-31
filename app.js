@@ -1,6 +1,6 @@
 $(function(){
-    const A = "🐶";
-    const B = "🐱";
+    let A = localStorage.playerA || "🐶";
+    let B = localStorage.playerB || "🐱";
     const size = 15;
     function initBoard(){
         //Create a hundred boxes
@@ -26,7 +26,6 @@ $(function(){
         [-2*size,-size,0,size,2*size],//Vertical
         [-2*size-2,-size-1,0,size+1,size*2+2],//Diag \,
         [2*size-2,size-1,0,-size+1,-2*size+2]]//Diag /;
-        console.log(winPositions);
         let won = 0;
         for(let i=0;i<boardState.length;i++){
             
@@ -39,7 +38,8 @@ $(function(){
             })
         }
         if(won!=0){
-            alert("Game over! Congratulations, " + (won==1?A:B) + " has won this round.")
+            $("#winner").text(won==1?A:B);
+            showPopup("win");
             boardState.fill(0);
             updateBoard();
         }
@@ -74,5 +74,36 @@ $(function(){
     $("#footer a").click(function(){
         showPopup($(this).data("popup"))
     });
-    $("#overlay").click(hidePopups);
+    
+    $(".popup").click(function(event){
+        event.stopImmediatePropagation();
+    })
+    $("#overlay,.close").click(hidePopups);
+    
+    //Testing
+    hidePopups();
+    showPopup("settings")
+    
+    //Settings
+
+    //Load settings at the startup
+    $("#playerA").val(A);
+    $("#playerA").val(B);
+
+    $("input").change(function(){
+        A = $("#playerA").val();
+        B = $("#playerB").val();
+        localStorage.playerA = A;
+        localStorage.playerB = B;
+    })
+
+    $(".settings a").click(function(){
+        var AB = $(this).text().split("&");
+        A = AB[0];
+        B = AB[1];
+        $("#playerA").val(A);
+        $("#playerB").val(B);
+        localStorage.playerA = A;
+        localStorage.playerB = B;  
+    })
 })
