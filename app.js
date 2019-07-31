@@ -42,6 +42,8 @@ $(function(){
             showPopup("win");
             boardState.fill(0);
             updateBoard();
+            //Google Analytics
+            ga('send', 'event', 'game', 'finished');
         }
     }
 
@@ -69,6 +71,7 @@ $(function(){
     function showPopup(which){
         $("#overlay").show();
         $(".popup."+which).show();
+        ga('send', 'event', 'popup',which);
     }
 
     $("#footer a").click(function(){
@@ -80,9 +83,6 @@ $(function(){
     })
     $("#overlay,.close").click(hidePopups);
     
-    //Testing
-    hidePopups();
-    showPopup("settings")
     
     //Settings
 

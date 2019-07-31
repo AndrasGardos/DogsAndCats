@@ -8,8 +8,8 @@ Available at https://dogsandcats.netlify.com/
 Contributions are welcome:)
 
 # TODO:
-- [ ] Add how to play and links 
+- [x] Add how to play and links 
 - [x] Make it responsive
 - [ ] Offline mode as Progressive Web App
 - [ ] Add meta descriptions and image for social networks
-- [ ] Add analytics
+- [x] Add analytics
