@@ -29,9 +29,8 @@ body {
     background-color: rgba(0, 0, 0, 0.068);
 
     display:flex;
-    align-content:center;
     justify-content: center;
-    text-align:center;
+    align-items: center;
     font-size:5.5vmin;
     cursor:pointer;
     -webkit-user-select: none; 

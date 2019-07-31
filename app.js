@@ -88,7 +88,7 @@ $(function(){
 
     //Load settings at the startup
     $("#playerA").val(A);
-    $("#playerA").val(B);
+    $("#playerB").val(B);
 
     $("input").change(function(){
         A = $("#playerA").val();
