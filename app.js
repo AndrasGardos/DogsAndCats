@@ -95,6 +95,7 @@ $(function(){
         B = $("#playerB").val();
         localStorage.playerA = A;
         localStorage.playerB = B;
+        updateBoard();
     })
 
     $(".settings a").click(function(){
@@ -105,5 +106,6 @@ $(function(){
         $("#playerB").val(B);
         localStorage.playerA = A;
         localStorage.playerB = B;  
+        updateBoard();
     })
 })
