@@ -1,7 +1,7 @@
 $(function(){
     let A = localStorage.playerA || "🐶";
     let B = localStorage.playerB || "🐱";
-    const size = 15;
+    const size = 12;
     function initBoard(){
         //Create a hundred boxes
         let html = new Array(size*size).fill("<div class='box'></div>").join("");

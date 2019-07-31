@@ -14,8 +14,8 @@ body {
 
 #game {
     display:grid;
-    grid-template-rows:repeat(15,1fr);
-    grid-template-columns:repeat(15,1fr);
+    grid-template-rows:repeat(12,1fr);
+    grid-template-columns:repeat(12,1fr);
     /*width:85vw;
     height:85vh;
     max-width:85vh;
@@ -28,9 +28,11 @@ body {
     border:0.3vmin solid rgb(255, 255, 255);
     background-color: rgba(0, 0, 0, 0.068);
 
-    line-height: 4.5vmin;
+    display:flex;
+    align-content:center;
+    justify-content: center;
     text-align:center;
-    font-size:4vmin;
+    font-size:5.5vmin;
     cursor:pointer;
     -webkit-user-select: none; 
     -moz-user-select: none;
