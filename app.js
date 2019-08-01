@@ -1,9 +1,16 @@
 $(function(){
+
+    function sendToGa(){
+        if(ga){
+            ga(...arguments);
+        }
+    }
+
     let A = localStorage.playerA || "🐶";
     let B = localStorage.playerB || "🐱";
     const size = 12;
     function initBoard(){
-        //Create a hundred boxes
+        //Create size*size boxes
         let html = new Array(size*size).fill("<div class='box'></div>").join("");
         $("#game").html(html);
     }
@@ -44,7 +51,7 @@ $(function(){
             updateBoard();
             console.log("Does this run?")
             //Google Analytics
-            ga('send', 'event', 'game', 'finished');
+            sendToGa('send', 'event', 'sendToGame', 'finished');
         }
     }
 
@@ -72,7 +79,7 @@ $(function(){
     function showPopup(which){
         $("#overlay").show();
         $(".popup."+which).show();
-        ga('send', 'event', 'popup',which);
+        sendToGa('send', 'event', 'popup',which);
     }
 
     $("#footer a").click(function(){
