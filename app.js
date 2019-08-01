@@ -44,7 +44,7 @@ $(function(){
             updateBoard();
             console.log("Does this run?")
             //Google Analytics
-            //ga('send', 'event', 'game', 'finished');
+            ga('send', 'event', 'game', 'finished');
         }
     }
 
@@ -72,7 +72,7 @@ $(function(){
     function showPopup(which){
         $("#overlay").show();
         $(".popup."+which).show();
-        //ga('send', 'event', 'popup',which);
+        ga('send', 'event', 'popup',which);
     }
 
     $("#footer a").click(function(){
