@@ -1,8 +1,11 @@
 $(function(){
 
     function sendToGa(){
-        if(ga){
-            ga(...arguments);
+        try {
+                ga(...arguments);
+            } 
+         catch (error) {
+            console.log("There is a problem with Google Analytics")
         }
     }
 

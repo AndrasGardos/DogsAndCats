@@ -51,6 +51,7 @@ body {
     bottom:1vmin;
     right:2vmin;
     color:rgb(0, 0, 0);
+    font-family: 'Fira Code', monospace;
 }
 
 #header {
@@ -76,12 +77,14 @@ body {
 }
 
 .popup {
+    font-family: 'Fira Code', monospace;
     display:none;
     width:80vmin;
     height:60vmin;
     background-color: whitesmoke;
     border-radius:5px;
     padding:20px;
+    overflow: auto;
 }
 
 
