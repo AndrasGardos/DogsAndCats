@@ -1,9 +1,9 @@
 $(function(){
 
-    function sendToGa(){
+    function sendToGa(which){
         try {
-                console.log(...arguments);
-                ga(...arguments);
+                console.log(which);
+                gtag('event', which);
             } 
          catch (error) {
             console.log("There is a problem with Google Analytics")
@@ -53,8 +53,6 @@ $(function(){
             showPopup("win");
             boardState.fill(0);
             updateBoard();
-            //Google Analytics
-            sendToGa('send', 'event', 'sendToGame', 'finished');
         }
     }
 
@@ -82,7 +80,7 @@ $(function(){
     function showPopup(which){
         $("#overlay").show();
         $(".popup."+which).show();
-        sendToGa('send', 'event', 'popup',which);
+        sendToGa(which);
     }
 
     $("#footer a").click(function(){
