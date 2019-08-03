@@ -2,6 +2,7 @@ $(function(){
 
     function sendToGa(){
         try {
+                console.log(...arguments);
                 ga(...arguments);
             } 
          catch (error) {
