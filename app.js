@@ -52,7 +52,6 @@ $(function(){
             showPopup("win");
             boardState.fill(0);
             updateBoard();
-            console.log("Does this run?")
             //Google Analytics
             sendToGa('send', 'event', 'sendToGame', 'finished');
         }
